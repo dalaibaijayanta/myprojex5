@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baijayanta Dalai | Portfolio</title>
+    <style>
+        /* --- RESET & BASE STYLES --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+
+        /* --- HEADER --- */
+        header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo { font-size: 1.5rem; font-weight: bold; }
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a:hover { color: #3498db; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+        .hero p { font-size: 1.25rem; opacity: 0.9; }
+        .btn {
+            display: inline-block;
+            background: #fff;
+            color: #3498db;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+        .btn:hover { background: #eee; }
+
+        /* --- SECTIONS GENERAL --- */
+        section { padding: 3rem 1rem; width: 90%; max-width: 1200px; margin: 0 auto; }
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #3498db;
+            margin: 10px auto 0;
+        }
+
+        /* --- ABOUT & EDUCATION --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* --- SKILLS --- */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .skill-tag {
+            background: #e1ecf4;
+            color: #2c3e50;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        /* --- PROJECTS --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .project-card:hover { transform: translateY(-5px); }
+        .project-card h3 { color: #3498db; margin-bottom: 0.5rem; }
+        .tech-stack {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* --- ACHIEVEMENTS & CERTS --- */
+        .list-group li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .list-group li::before {
+            content: '🏆';
+            position: absolute;
+            left: 0;
+        }
+
+        /* --- CONTACT / FOOTER --- */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .contact-info p { margin-bottom: 0.5rem; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; } /* Simple hiding for mobile demo */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Baijayanta.</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Hi, I'm Baijayanta Dalai</h1>
+        <p>Full Stack Developer | Machine Learning Enthusiast | Competitive Programmer</p>
+        <a href="#contact" class="btn">Get in Touch</a>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-grid">
+            <div class="card">
+                <h3>My Background</h3>
+                <p style="margin-top: 1rem;">
+                    I am a 3rd-year Computer Science student at CV Raman Global University with a CGPA of 8.93. 
+                    I am passionate about building full-stack web applications and exploring Machine Learning solutions 
+                    for real-world problems like land digitization and resource management.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Education</h3>
+                <ul style="margin-top: 1rem;">
+                    <li><strong>B.Tech in Computer Science</strong><br>CV Raman Global University (2027)<br>CGPA: 8.93 | Semester: 5th</li>
+                    <li style="margin-top: 0.5rem;"><strong>Class 12th (Boards)</strong><br>C.H.S.E - 89%</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-container">
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">React.js</span>
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express.js</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Tailwind CSS</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">Git/GitHub</span>
+            <span class="skill-tag">Azure Basics</span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Forest Rights Act (FRA) Atlas</h3>
+                <p>An interactive GIS-based system to digitize and visualize FRA claims. Enables click-to-view ownership details and uses OCR/AI for document digitization.</p>
+                <p class="tech-stack"><strong>Stack:</strong> TensorFlow, Leaflet.js, PostgreSQL, React.js, Node.js</p>
+            </div>
+
+            <div class="project-card">
+                <h3>ADHIKAR SET - Patta Analyzer</h3>
+                <p>AI-based system to scan and analyze land documents (Patta). Automates the extraction of owner names, survey numbers, and location details using OCR.</p>
+                <p class="tech-stack"><strong>Stack:</strong> Python, OpenCV, Tesseract OCR, Scikit-learn</p>
+            </div>
+
+            <div class="project-card">
+                <h3>LIBRARY HUB</h3>
+                <p>A web-based book management system handling search, issue, and return tracking. Features auto-calculation of due dates and fines.</p>
+                <p class="tech-stack"><strong>Stack:</strong> HTML, CSS, JavaScript, Python (Flask), SQLite</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <h2>Achievements & Certifications</h2>
+        <div class="about-grid">
+            <div class="card">
+                <h3>Hackathons</h3>
+                <ul class="list-group" style="margin-top: 1rem;">
+                    <li>Smart India Hackathon 2025 (Pre-final Level)</li>
+                    <li>Adobe India Hackathon (Level 2)</li>
+                    <li>TVS Credit Epic (Level 2)</li>
+                    <li>Flipkart Grid Challenge (Level 1)</li>
+                    <li>TCS Codevita Challenge (Level 1)</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Certifications</h3>
+                <ul class="list-group" style="margin-top: 1rem;">
+                    <li>Microsoft: Monitor Azure AI Services (2024)</li>
+                    <li>Coursera: Configuration Management & Cloud</li>
+                    <li>Coursera: Automating Real-World Tasks with Python</li>
+                    <li>McKinsey Forward Program Graduate</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="social-links">
+            <a href="#">LinkedIn (B Dalai)</a>
+            <a href="#">GitHub (Jaggubhai364)</a>
+            <a href="#">LeetCode (jagabhai03)</a>
+        </div>
+        <div class="contact-info">
+            <p>Email: bijayani178@gmail.com</p>
+            <p>Phone: +91-8144497676</p>
+            <p>© 2025 Baijayanta Dalai</p>
+        </div>
+    </footer>
+
+</body>
+</html>
